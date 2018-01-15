@@ -8,3 +8,8 @@
 
 之后就可以运行了。
 
+有个问题注意；
+新版本的tf，用如下方式。
+weight_initializer = tf.contrib.layers.variance_scaling_initializer(factor=sigma,mode="FAN_AVG")
+旧版本的tf，用下述写法。
+weight_initializer = tf.variance_scaling_initializer(mode="fan_avg", distribution="uniform", scale=sigma)
